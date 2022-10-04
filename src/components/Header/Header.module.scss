@@ -1,0 +1,112 @@
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin cartTypography {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+}
+
+.header {
+  height: 130px;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #F7F7F7;
+  margin-top: 50px;
+  padding: 0 32px;
+  background-color: #FFFFFF;
+}
+
+.logoSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+}
+
+.logo {
+  width: 254px;
+  height: 75px;
+  margin-top: -23px;
+}
+
+.titleWrapper {
+  @include flexCenter;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 29px;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: #232323;
+}
+
+.subtitle {
+  @include cartTypography;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-align: left;
+  color: #7B7B7B;
+}
+
+.cartSection {
+  background-color: #0076CA;
+  width: 200px;
+  height: 50px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, .6);
+  transition: background-color .15s ease-in-out,border-color .15s ease-in-out;
+  &:hover {
+    background-color: #0067b1;
+  }
+  &:active{
+    background-color: #0076CA;
+    margin-top: 2px;
+  }
+}
+
+
+
+.cartPrice {
+  @include cartTypography;
+  min-width: 100px;
+  min-height: 50px;
+  border-right: 3px solid rgba(255, 255, 255, 0.25);
+  padding-top: 15px;
+  text-align: right;
+}
+
+.valueWrapper {
+  display: flex;
+  align-content: center;
+  min-width: 100px;
+  min-height: 50px;
+}
+
+.cartImage {
+  padding: 0 10px;
+  justify-self: start;
+}
+
+.value {
+  @include cartTypography;
+  padding-top: 15px;
+}
+
+.rub {
+  @include cartTypography;
+  padding: 0 10px 0 4px;
+}
