@@ -12,21 +12,21 @@
 }
 
 .header {
-  height: 130px;
-  width: 90%;
+  border-bottom: 1px solid #f6f6f6;
+  padding: 40px 0;
+}
+
+.container {
+  align-items: center;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #F7F7F7;
-  margin-top: 50px;
-  padding: 0 32px;
-  background-color: #FFFFFF;
+  margin: 0 auto;
+  width: 90%;
 }
 
 .logoSection {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
   gap: 17px;
 }
@@ -34,12 +34,11 @@
 .logo {
   width: 254px;
   height: 75px;
-  margin-top: -23px;
+  cursor: pointer;
 }
 
-.titleWrapper {
-  @include flexCenter;
-  flex-direction: column;
+.headerTextContent {
+  margin-top: 19px;
 }
 
 .title {
@@ -49,6 +48,10 @@
   letter-spacing: 0.01em;
   text-align: left;
   color: #232323;
+}
+
+.accent {
+  color: #FE5F1E;
 }
 
 .subtitle {
@@ -63,22 +66,23 @@
   background-color: #0076CA;
   width: 200px;
   height: 50px;
-  border-radius: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 5px 5px rgba(0, 0, 0, .6);
-  transition: background-color .15s ease-in-out,border-color .15s ease-in-out;
+  border-radius: 30px;
+  transition: background-color .15s ease-in-out, border-color .15s ease-in-out;
+  margin-top: 18px;
+
   &:hover {
     background-color: #0067b1;
   }
-  &:active{
+
+  &:active {
     background-color: #0076CA;
-    margin-top: 2px;
+    margin-top: 20px;
   }
 }
-
-
 
 .cartPrice {
   @include cartTypography;

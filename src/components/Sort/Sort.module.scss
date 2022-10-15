@@ -1,0 +1,62 @@
+@mixin typography {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.015em;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  position: relative;
+}
+
+.svg {
+  width: 10px;
+  height: 6px;
+}
+
+.pText {
+@include typography;
+  color: #2C2C2C;
+  cursor: default;
+}
+
+.spanText {
+ @include typography;
+  color: #FE5F1E;
+  cursor: pointer;
+  &:hover {
+    border-bottom: 2px dotted #FE5F1E;
+
+  }
+}
+
+.popup {
+  position: absolute;
+  right: 0;
+  top: 30px;
+  background: #ffffff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.09);
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 10px 0;
+
+  ul {
+    overflow: hidden;
+
+    li {
+      padding: 12px 20px;
+      cursor: pointer;
+
+      &.active,
+      &:hover {
+        background: rgba(254, 95, 30, 0.05);
+      }
+    }
+  }
+}
+
