@@ -1,5 +1,5 @@
 import style from './Sort.module.scss'
-import arrow from '../../vendor/Vector.svg'
+import arrow from '../../assets/img/Vector.svg'
 function Sort() {
   return (
     <div className={style.wrapper}>

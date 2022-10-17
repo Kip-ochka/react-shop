@@ -3,7 +3,7 @@ import Header from '../Header/Header'
 import Categories from '../Categories/Categories'
 import Sort from '../Sort/Sort'
 import Product from '../Product/Product'
-
+import db from '../../assets/pizzasDB.json'
 function App() {
   return (
     <div className={appStyles.wrapper}>
@@ -16,10 +16,9 @@ function App() {
           </div>
           <h2 className={appStyles.pageTitle}>Все товары</h2>
           <div className={appStyles.products}>
-            <Product />
-            <Product />
-            <Product />
-            <Product />
+            {db.pizzas.map((pizza, index)=> {
+             return <Product key={index} title={pizza.title} price={pizza.price} imageUrl={pizza.imageUrl} sizes={pizza.sizes} types={pizza.types}/>
+            })}
           </div>
         </div>
       </div>

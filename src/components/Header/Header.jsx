@@ -1,6 +1,6 @@
 import headerStyle from './Header.module.scss'
-import profitLogo from '../../vendor/logo3.png'
-import cart from '../../vendor/cart.svg'
+import profitLogo from '../../assets/img/logo3.png'
+import cart from '../../assets/img/cart.svg'
 
 const Header = () => {
   return (
