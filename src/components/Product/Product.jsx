@@ -15,10 +15,12 @@ function Product(props) {
         </a>
         <div className={style.product__selector}>
           <ul>
-            {props.types.map((typeId, index) => <li key={index} onClick={()=>setActiveType(typeId)} className={activeType === index ? style.active : ''}>{typesName[typeId]}</li>)}
+            {props.types.map((typeId, index) => <li key={index} onClick={() => setActiveType(typeId)}
+                                                    className={activeType === index ? style.active : ''}>{typesName[typeId]}</li>)}
           </ul>
           <ul>
-            {props.sizes.map((size, index) => <li key={index} onClick={()=>setActiveSize(index)} className={activeSize === index ? style.active : ''}>{size} см.</li>)}
+            {props.sizes.map((size, index) => <li key={index} onClick={() => setActiveSize(index)}
+                                                  className={activeSize === index ? style.active : ''}>{size} см.</li>)}
           </ul>
         </div>
         <div className={style.product__bottom}>
