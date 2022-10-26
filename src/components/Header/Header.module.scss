@@ -64,15 +64,18 @@
 
 .cartSection {
   background-color: #0076CA;
-  width: 200px;
-  height: 50px;
   display: flex;
   justify-content: space-between;
+  gap: 10px;
   align-items: center;
   box-shadow: 0 5px 5px rgba(0, 0, 0, .6);
   border-radius: 30px;
   transition: background-color .15s ease-in-out, border-color .15s ease-in-out;
   margin-top: 18px;
+  padding: 15px 23px;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
 
   &:hover {
     background-color: #0067b1;
@@ -86,31 +89,25 @@
 
 .cartPrice {
   @include cartTypography;
-  min-width: 100px;
-  min-height: 50px;
-  border-right: 3px solid rgba(255, 255, 255, 0.25);
-  padding-top: 15px;
   text-align: right;
 }
 
 .valueWrapper {
   display: flex;
-  align-content: center;
-  min-width: 100px;
-  min-height: 50px;
-}
-
-.cartImage {
-  padding: 0 10px;
-  justify-self: start;
+  gap: 8px;
+  align-items: center;
 }
 
 .value {
   @include cartTypography;
-  padding-top: 15px;
 }
 
 .rub {
   @include cartTypography;
-  padding: 0 10px 0 4px;
+}
+
+.stick{
+  width: 1px;
+  height: 25px;
+  background: rgba(255, 255, 255, 0.25);
 }

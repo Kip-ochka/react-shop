@@ -1,15 +1,16 @@
 import headerStyle from './Header.module.scss'
 import profitLogo from '../../assets/img/logo3.png'
 import cart from '../../assets/img/cart.svg'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
   return (
     <header className={headerStyle.header}>
       <div className={headerStyle.container}>
         <div className={headerStyle.logoSection}>
-          <a href="/">
+          <Link to="/">
             <img src={profitLogo} alt="" className={headerStyle.logo} />
-          </a>
+          </Link>
 
           <div className={headerStyle.headerTextContent}>
             <h1 className={headerStyle.title}>
@@ -20,18 +21,19 @@ const Header = () => {
             </p>
           </div>
         </div>
-        <a href="#">
+        <Link to="/cart">
           <div className={headerStyle.cartSection}>
             <p className={headerStyle.cartPrice}>
-              56211
+              5207
               <span className={headerStyle.rub}>&#8381;</span>
             </p>
+            <div className={headerStyle.stick}/>
             <div className={headerStyle.valueWrapper}>
               <img src={cart} alt="logo" className={headerStyle.cartImage} />
-              <p className={headerStyle.value}>9999</p>
+              <p className={headerStyle.value}>99</p>
             </div>
           </div>
-        </a>
+        </Link>
       </div>
     </header>
   )
