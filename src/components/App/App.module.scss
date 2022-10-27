@@ -6,6 +6,11 @@
   margin: 50px auto;
   max-width: 1400px;
   width: calc(100vw - 100px);
+  @media (max-width: 440px) {
+    margin: 0;
+    min-height: 100vh;
+    width: 100%;
+  }
 }
 
 .content {
@@ -16,26 +21,4 @@
   width: 90%;
 }
 
-.choiceSection {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-}
 
-.pageTitle {
-  font-style: normal;
-  line-height: 39px;
-  letter-spacing: 0.01em;
-  color: #000000;
-  font-size: 38px;
-  font-weight: 800;
-  margin-bottom: 50px;
-  margin-top: 60px;
-}
-
-.products {
-  grid-column-gap: 11px;
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  grid-template-rows: repeat(1,1fr);
-}

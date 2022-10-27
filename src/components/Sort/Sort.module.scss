@@ -8,10 +8,13 @@
 
 .wrapper {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   gap: 7px;
   position: relative;
+  @media (max-width: 1440px) {
+    margin: 0 0 30px 0;
+  }
 }
 
 .svg {
@@ -20,15 +23,16 @@
 }
 
 .pText {
-@include typography;
+  @include typography;
   color: #2C2C2C;
   cursor: default;
 }
 
 .spanText {
- @include typography;
+  @include typography;
   color: #FE5F1E;
   cursor: pointer;
+
   &:hover {
     border-bottom: 2px dotted #FE5F1E;
 

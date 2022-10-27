@@ -1,6 +1,5 @@
 import React from 'react'
-
-import appStyles from '../App/App.module.scss'
+import style from './Home.module.scss'
 import Categories from '../Categories/Categories'
 import Sort from '../Sort/Sort'
 import Skeleton from '../Product/SkeletonProduct'
@@ -19,12 +18,12 @@ const Home = () => {
   }, [])
   return (
     <>
-      <div className={appStyles.choiceSection}>
+      <div className={style.choiceSection}>
         <Categories />
         <Sort />
       </div>
-      <h2 className={appStyles.pageTitle}>Все товары</h2>
-      <div className={appStyles.products}>
+      <h2 className={style.pageTitle}>Все товары</h2>
+      <div className={style.products}>
         {isLoading
           ? [...new Array(4)].map((_, index) => <Skeleton key={index} />)
           : products.map((pizza) => {

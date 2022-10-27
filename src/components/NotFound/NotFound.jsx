@@ -1,4 +1,4 @@
-import style from './NodFoundComponent.module.scss'
+import style from './NodFound.module.scss'
 import React from 'react'
 
 const NotFoundComponent = () => {

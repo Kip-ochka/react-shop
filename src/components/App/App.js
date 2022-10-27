@@ -1,9 +1,9 @@
 import React from 'react'
 import appStyles from './App.module.scss'
 import Header from '../Header/Header'
-import Home from '../pages/Home'
-import NotFound from '../pages/NotFound'
-import Cart from '../pages/Cart'
+import HomePage from '../pages/HomePage'
+import NotFoundPage from '../pages/NotFoundPage'
+import CartPage from '../pages/CartPage'
 import { Route, Routes } from 'react-router-dom'
 
 function App() {
@@ -14,9 +14,9 @@ function App() {
       <div className={appStyles.container}>
         <div className={appStyles.content}>
           <Routes>
-            <Route path='/' element={<Home/>}/>
-            <Route path='/cart' element={<Cart/>}/>
-            <Route path='*' element={<NotFound/>}/>
+            <Route path='/' element={<HomePage/>}/>
+            <Route path='/cart' element={<CartPage/>}/>
+            <Route path='*' element={<NotFoundPage/>}/>
           </Routes>
         </div>
       </div>

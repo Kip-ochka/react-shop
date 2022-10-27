@@ -14,11 +14,15 @@
 .header {
   border-bottom: 1px solid #f6f6f6;
   padding: 40px 0;
+  @media (max-width: 650px) {
+    padding: 20px 0;
+  }
 }
 
 .container {
   align-items: center;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin: 0 auto;
   width: 90%;
@@ -29,16 +33,23 @@
   flex-direction: row;
   align-items: center;
   gap: 17px;
+
 }
 
 .logo {
   width: 254px;
   height: 75px;
   cursor: pointer;
+  @media (max-width: 980px) {
+display: none;
+  }
 }
 
 .headerTextContent {
   margin-top: 19px;
+  @media (max-width: 980px) {
+    margin: 0;
+  }
 }
 
 .title {
@@ -74,8 +85,6 @@
   margin-top: 18px;
   padding: 15px 23px;
   user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
 
   &:hover {
     background-color: #0067b1;

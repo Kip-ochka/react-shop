@@ -1,8 +1,13 @@
 .wrapper {
   text-align: center;
-  padding: 100px;
+  padding: 10%;
   max-width: 750px;
   margin: 0 auto;
+
+  @media (max-width: 440px) {
+
+    padding: 0;
+  }
 }
 .title {
 
