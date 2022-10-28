@@ -26,14 +26,17 @@
   display: flex;
   align-items: center;
   gap: 5px;
-  svg{
+
+  svg {
     width: 30px;
     height: 30px;
-    path{
+
+    path {
       stroke: #232323;
     }
   }
-  h2{
+
+  h2 {
     font-weight: 800;
     font-size: 32px;
   }
@@ -64,8 +67,9 @@
   cursor: pointer;
   user-select: none;
   display: flex;
-  gap:5px;
+  gap: 5px;
   transition: all .15s ease-in-out;
+
   span {
     font-size: 18px;
     color: #7B7B7B;
@@ -74,6 +78,7 @@
   svg {
     width: 25px;
     height: 25px;
+
     path {
       stroke: #7B7B7B;
     }
@@ -89,5 +94,92 @@
         stroke: #232323;
       }
     }
+  }
+}
+
+.cartBottom {
+  display: grid;
+  row-gap: 40px;
+}
+
+.valueWrapper {
+  display: flex;
+  justify-content: space-between;
+
+  span {
+    font-size: 22px;
+
+    .price {
+      color: #fe5f1e;
+    }
+  }
+}
+
+.buttonsWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttonWrapper {
+  a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 2px solid #dddddd;
+    border-radius: 30px;
+    cursor: pointer;
+    min-width: 100px;
+    padding: 15px 20px;
+    text-align: center;
+    transition: background-color .15s ease-in-out,border-color .15s ease-in-out;
+    user-select: none;
+    span{
+      color: #c3c3c3;
+      font-weight: 600;
+    }
+  }
+  &:hover{
+    a{
+      background-color: #232323;
+      border-color: #232323;
+      span{
+        color: #FFF;
+      }
+      svg{
+        path{
+          stroke:#FFF;
+        }
+      }
+    }
+  }
+  &:active{
+    a{
+      background-color: #7B7B7B;
+      border-color:  #7B7B7B;
+    }
+  }
+}
+
+.payButton {
+  display: flex;
+  align-items: center;
+  border-radius: 30px;
+  min-width: 100px;
+  background-color: #fe5f1e;
+  padding: 15px 20px;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  cursor: pointer;
+  user-select: none;
+  span{
+    color: #f3f3f3;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  &:hover{
+    background-color: #E4551B;
+  }
+  &:active{
+    background-color:#B64415;
   }
 }
