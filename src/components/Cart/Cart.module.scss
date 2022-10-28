@@ -22,6 +22,22 @@
   }
 }
 
+.titleWrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  svg{
+    width: 30px;
+    height: 30px;
+    path{
+      stroke: #232323;
+    }
+  }
+  h2{
+    font-weight: 800;
+    font-size: 32px;
+  }
+}
 
 .button {
   background-color: #232323;
@@ -39,6 +55,7 @@
 .cartTop {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 30px;
 }
 
@@ -48,12 +65,15 @@
   user-select: none;
   display: flex;
   gap:5px;
+  transition: all .15s ease-in-out;
   span {
     font-size: 18px;
     color: #7B7B7B;
   }
 
   svg {
+    width: 25px;
+    height: 25px;
     path {
       stroke: #7B7B7B;
     }
